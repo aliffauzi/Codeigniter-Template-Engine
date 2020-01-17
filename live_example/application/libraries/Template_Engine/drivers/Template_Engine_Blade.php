@@ -23,6 +23,16 @@ class Template_Engine_Blade
 	}
 
 	/**
+	 * Get Engine
+	 * 
+	 * @return object
+	 */
+	public function get_engine()
+	{
+		return $this->engine;
+	}
+
+	/**
 	 * Render View
 	 * 
 	 * @param  string $page View File
@@ -39,7 +49,7 @@ class Template_Engine_Blade
 	 */
 	public function decorate($parent)
 	{
-		$this->engine = new CiMS\TemplateEngine\Blade($parent->view_paths, $parent->cache_path);
+		$this->engine = new \Nightigniter\TemplateEngine\Blade($parent->view_paths, $parent->cache_path);
 	}
 }
 

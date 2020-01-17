@@ -23,6 +23,16 @@ class Template_Engine_Twig
 	}
 
 	/**
+	 * Get Engine
+	 * 
+	 * @return object
+	 */
+	public function get_engine()
+	{
+		return $this->engine;
+	}
+
+	/**
 	 * Render View
 	 * 
 	 * @param  string $page View File
@@ -39,7 +49,7 @@ class Template_Engine_Twig
 	 */
 	public function decorate($parent)
 	{
-		$this->engine = new CiMS\TemplateEngine\Twig($parent->view_paths, $parent->cache_path);
+		$this->engine = new \Nightigniter\TemplateEngine\Twig($parent->view_paths, $parent->cache_path);
 	}
 }
 
